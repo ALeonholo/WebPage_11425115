@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="炳賢炸雞店 —— 專為手沖炸雞愛好者打造的頂級美味。融合高級叫花雞古法荷葉泥烤工藝與極致手沖油淋技法，外酥裡嫩、香氣迸發！">
+  <meta name="keywords" content="炳賢炸雞店, 手沖炸雞, 高級叫花雞, 炸雞推薦, 手沖油淋, 叫花雞, 炳賢愛好者">
+  <title>炳賢炸雞店｜高級叫花雞 ✕ 手沖炸雞極致殿堂</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Noto+Serif+TC:wght@500;600;700;900&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* -----------------------------------------
+       品牌調色盤：正宗「雞色」金黃香脆與叫花沉香
+    ----------------------------------------- */
+    :root {
+      --color-gold: #f59e0b;
+      --color-gold-light: #fbbf24;
+      --color-gold-glow: #fde68a;
+      --color-amber: #d97706;
+      --color-crisp: #b45309;
+      --color-roast: #78350f;
+      --color-clay: #92400e;
+      --color-charcoal: #1c1917;
+      --color-dark-surface: #292524;
+      --color-dark-card: #201d1b;
+      --color-cream: #fefce8;
+      --color-skin: #fef3c7;
+      --color-skin-soft: #fffbeb;
+      --color-white: #ffffff;
+      --color-muted: #a8a29e;
+      --color-border: #44403c;
+      --color-border-light: rgba(245, 158, 11, 0.25);
+      
+      --font-serif: "Noto Serif TC", serif;
+      --font-sans: "Noto Sans TC", sans-serif;
+      --font-display: "Cinzel", "Noto Serif TC", serif;
+
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
+      --shadow-gold: 0 0 25px rgba(245, 158, 11, 0.35);
+      
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--color-charcoal);
+      color: var(--color-skin);
+      font-family: var(--font-sans);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(217, 119, 6, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(180, 83, 9, 0.1) 0%, transparent 45%);
+    }
+
+    /* 捲軸美化 */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--color-charcoal);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-clay);
+      border-radius: var(--radius-full);
+      border: 2px solid var(--color-charcoal);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-gold);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      transition: var(--transition);
+    }
+
+    .container {
+      width: min(1200px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .serif {
+      font-family: var(--font-serif);
+    }
+
+    /* 徽章與眉題 */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-gold-light);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--color-gold);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-family: var(--font-serif);
+      color: var(--color-white);
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .section-title span.glow {
+      color: var(--color-gold);
+      text-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+    }
+
+    .section-subtitle {
+      max-width: 650px;
+      margin-inline: auto;
+      color: var(--color-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* 按鈕樣式 */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-amber) 100%);
+      color: var(--color-charcoal);
+      box-shadow: 0 8px 24px rgba(217, 119, 6, 0.4);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(245, 158, 11, 0.6);
+      background: linear-gradient(135deg, #fcd34d 0%, var(--color-gold) 100%);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--color-gold);
+      color: var(--color-gold-light);
+      background: rgba(245, 158, 11, 0.06);
+    }
+
+    .btn-outline:hover {
+      background: rgba(245, 158, 11, 0.18);
+      transform: translateY(-2px);
+      border-color: var(--color-gold-light);
+      color: var(--color-white);
+    }
+
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* -----------------------------------------
+       導覽列 Navigation
+    ----------------------------------------- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: var(--transition);
+      background: rgba(28, 25, 23, 0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-emblem {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--color-gold) 20%, var(--color-roast) 100%);
+      display: grid;
+      place-items: center;
+      color: var(--color-charcoal);
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.5);
+      border: 2px solid var(--color-gold-glow);
+    }
+
+    .brand-emblem svg {
+      width: 26px;
+      height: 26px;
+      fill: var(--color-charcoal);
+    }
+
+    .brand-text h1 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: var(--color-white);
+      letter-spacing: 0.08em;
+      line-height: 1.15;
+    }
+
+    .brand-text p {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      color: var(--color-gold-light);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--color-skin);
+      font-size: 0.95rem;
+      font-weight: 500;
+      position: relative;
+      padding-block: 6px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-gold);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--color-gold-light);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .cart-trigger {
+      position: relative;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      display: grid;
+      place-items: center;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid var(--color-border-light);
+      color: var(--color-gold-light);
+    }
+
+    .cart-trigger:hover {
+      background: rgba(245, 158, 11, 0.25);
+      color: var(--color-white);
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: var(--color-amber);
+      color: var(--color-white);
+      font-size: 0.7rem;
+      font-weight: 700;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      width: 32px;
+      height: 32px;
+      justify-content: center;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--color-gold-light);
+      transition: var(--transition);
+    }
+
+    /* -----------------------------------------
+       Hero 旗艦主視覺
+    ----------------------------------------- */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: 
+        linear-gradient(to bottom, rgba(28, 25, 23, 0.6) 0%, rgba(28, 25, 23, 0.95) 100%),
+        radial-gradient(circle at 75% 40%, rgba(217, 119, 6, 0.22) 0%, transparent 60%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      color: var(--color-gold-glow);
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .hero-tag .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      box-shadow: 0 0 10px var(--color-gold);
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+      font-family: var(--font-serif);
+      font-weight: 900;
+      line-height: 1.18;
+      color: var(--color-white);
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #b45309 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero-lead {
+      font-size: 1.15rem;
+      color: #e7e5e4;
+      line-height: 1.85;
+      margin-bottom: 34px;
+      max-width: 560px;
+    }
+
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .feature-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(41, 37, 36, 0.8);
+      border: 1px solid var(--color-border);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: var(--color-skin);
+    }
+
+    .feature-chip svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--color-gold);
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    /* Hero 右側互動展演卡片 */
+    .hero-showcase {
+      position: relative;
+    }
+
+    .chicken-art-card {
+      position: relative;
+      background: linear-gradient(145deg, #2d2825 0%, #1c1917 100%);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 30px;
+      box-shadow: var(--shadow-lg), var(--shadow-gold);
+      overflow: hidden;
+    }
+
+    .chicken-art-card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .card-badge-floating {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: linear-gradient(135deg, var(--color-amber), var(--color-crisp));
+      color: var(--color-white);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      box-shadow: var(--shadow-sm);
+      z-index: 2;
+    }
+
+    .showcase-illustration {
+      width: 100%;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    /* 手繪質感叫花雞與手沖油淋 SVG 展演 */
+    .drip-canvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    .dish-info h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--color-white);
+      margin-bottom: 8px;
+    }
+
+    .dish-info p {
+      color: var(--color-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .dish-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(245, 158, 11, 0.15);
+      padding-top: 18px;
+    }
+
+    .dish-price {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .dish-price .currency {
+      color: var(--color-gold);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .dish-price .amount {
+      color: var(--color-white);
+      font-size: 1.9rem;
+      font-family: var(--font-serif);
+      font-weight: 900;
+    }
+
+    .dish-price .original {
+      color: #78716c;
+      text-decoration: line-through;
+      font-size: 0.9rem;
+    }
+
+    /* -----------------------------------------
+       品牌故事 Philosophy & Heritage
+    ----------------------------------------- */
+    .section-story {
+      padding-block: 100px;
+      background: linear-gradient(180deg, var(--color-charcoal) 0%, #151312 100%);
+      border-top: 1px solid rgba(245, 158, 11, 0.1);
+      position: relative;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .story-quote-box {
+      background: rgba(41, 37, 36, 0.6);
+      border-left: 4px solid var(--color-gold);
+      padding: 30px 36px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .story-quote-box::after {
+      content: "”";
+      position: absolute;
+      top: -20px;
+      right: 20px;
+      font-family: var(--font-serif);
+      font-size: 6rem;
+      color: rgba(245, 158, 11, 0.12);
+      line-height: 1;
+    }
+
+    .story-quote-box p {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--color-skin);
+      line-height: 1.9;
+      font-style: italic;
+    }
+
+    .story-narrative p {
+      color: var(--color-muted);
+      margin-bottom: 18px;
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .story-narrative strong {
+      color: var(--color-gold-light);
+    }
+
+    .craft-pillars {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .pillar-card {
+      background: rgba(32, 29, 27, 0.8);
+      border: 1px solid rgba(245, 158, 11, 0.18);
+      padding: 24px;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--color-gold);
+      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.15);
+      background: rgba(41, 37, 36, 0.9);
+    }
+
+    .pillar-num {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .pillar-card h4 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--color-white);
+      margin-bottom: 8px;
+    }
+
+    .pillar-card p {
+      color: var(--color-muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    /* -----------------------------------------
+       四大工藝手沖儀式 Ritual Section
+    ----------------------------------------- */
+    .section-ritual {
+      padding-block: 100px;
+      background: #191615;
+      position: relative;
+    }
+
+    .ritual-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+
+    .ritual-card {
+      background: rgba(41, 37, 36, 0.45);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      text-align: center;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .ritual-card:hover {
+      border-color: var(--color-gold);
+      transform: translateY(-6px);
+      background: rgba(41, 37, 36, 0.85);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .step-badge {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid var(--color-gold);
+      color: var(--color-gold);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+      transition: var(--transition);
+    }
+
+    .ritual-card:hover .step-badge {
+      background: var(--color-gold);
+      color: var(--color-charcoal);
+      box-shadow: 0 0 18px var(--color-gold);
+    }
+
+    .ritual-card h3 {
+      font-family: var(--font-serif);
+      color: var(--color-white);
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .ritual-card p {
+      color: var(--color-muted);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    /* -----------------------------------------
+       招牌菜單 Menu Showcase
+    ----------------------------------------- */
+    .section-menu {
+      padding-block: 100px;
+      background: var(--color-charcoal);
+    }
+
+    .menu-filter {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-border);
+      color: var(--color-skin);
+      font-size: 0.9rem;
+      font-weight: 600;
+      background: rgba(41, 37, 36, 0.6);
+    }
+
+    .filter-btn:hover {
+      border-color: var(--color-gold);
+      color: var(--color-gold-light);
+    }
+
+    .filter-btn.active {
+      background: var(--color-gold);
+      color: var(--color-charcoal);
+      border-color: var(--color-gold);
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .menu-card {
+      background: #231f1d;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(245, 158, 11, 0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--color-gold);
+      box-shadow: var(--shadow-md), 0 0 20px rgba(245, 158, 11, 0.2);
+    }
+
+    .menu-card-img-wrap {
+      height: 200px;
+      background: radial-gradient(circle at center, #3c322b 0%, #1c1917 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--color-amber);
+      color: var(--color-white);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.05em;
+    }
+
+    .crisp-meter {
+      position: absolute;
+      bottom: 12px;
+      right: 14px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      color: var(--color-gold-light);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .menu-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .menu-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--color-white);
+      margin-bottom: 8px;
+    }
+
+    .menu-card-desc {
+      color: var(--color-muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .menu-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 16px;
+    }
+
+    .item-price {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--color-gold-light);
+    }
+
+    .item-price small {
+      font-size: 0.8rem;
+      color: var(--color-gold);
+      margin-right: 2px;
+    }
+
+    /* -----------------------------------------
+       炳賢粉回饋與口碑 Social Proof
+    ----------------------------------------- */
+    .section-reviews {
+      padding-block: 90px;
+      background: linear-gradient(180deg, #151312 0%, var(--color-charcoal) 100%);
+      border-top: 1px solid rgba(245, 158, 11, 0.1);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .review-card {
+      background: rgba(35, 31, 29, 0.7);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 26px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .review-card:hover {
+      border-color: rgba(245, 158, 11, 0.5);
+      transform: translateY(-4px);
+    }
+
+    .stars {
+      color: var(--color-gold);
+      margin-bottom: 14px;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+
+    .review-text {
+      color: var(--color-skin);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .reviewer-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--color-clay);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: var(--color-white);
+      font-size: 0.9rem;
+      border: 1px solid var(--color-gold);
+    }
+
+    .reviewer-info h4 {
+      color: var(--color-white);
+      font-size: 0.95rem;
+    }
+
+    .reviewer-info span {
+      color: var(--color-muted);
+      font-size: 0.78rem;
+    }
+
+    /* -----------------------------------------
+       線上預約 / 炳賢粉專屬訂餐特區
+    ----------------------------------------- */
+    .section-order {
+      padding-block: 100px;
+      background: radial-gradient(circle at 50% 50%, #2f2722 0%, #1a1716 100%);
+      position: relative;
+    }
+
+    .order-box {
+      max-width: 900px;
+      margin-inline: auto;
+      background: #24201e;
+      border: 1px solid var(--color-gold);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      box-shadow: var(--shadow-lg), var(--shadow-gold);
+    }
+
+    .order-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-gold-light);
+    }
+
+    .form-control {
+      background: #181514;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      color: var(--color-white);
+      font-family: inherit;
+      font-size: 0.92rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--color-gold);
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+    }
+
+    select.form-control {
+      cursor: pointer;
+    }
+
+    .fan-code-wrap {
+      display: flex;
+      gap: 10px;
+    }
+
+    .fan-code-wrap input {
+      flex: 1;
+    }
+
+    .order-summary-box {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 26px;
+      border: 1px dashed rgba(245, 158, 11, 0.3);
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      color: var(--color-muted);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .summary-row.total {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 12px;
+      margin-top: 12px;
+      color: var(--color-white);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .summary-row.total .price-val {
+      color: var(--color-gold-light);
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+    }
+
+    /* -----------------------------------------
+       門市鑑賞資訊 Store Info
+    ----------------------------------------- */
+    .section-stores {
+      padding-block: 80px;
+      background: var(--color-charcoal);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .store-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .store-info-card {
+      background: #231f1d;
+      border-radius: var(--radius-md);
+      padding: 32px;
+      border: 1px solid rgba(245, 158, 11, 0.2);
+    }
+
+    .store-info-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--color-white);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .store-info-card h3 svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--color-gold);
+    }
+
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      color: var(--color-skin);
+      font-size: 0.92rem;
+    }
+
+    .info-list strong {
+      color: var(--color-gold-light);
+      margin-right: 8px;
+    }
+
+    /* -----------------------------------------
+       頁尾 Footer
+    ----------------------------------------- */
+    .footer {
+      background: #110f0e;
+      border-top: 1px solid rgba(245, 158, 11, 0.15);
+      padding-top: 60px;
+      padding-bottom: 30px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    .footer-desc {
+      color: var(--color-muted);
+      font-size: 0.9rem;
+      line-height: 1.8;
+      max-width: 400px;
+      margin-top: 16px;
+    }
+
+    .footer-col h4 {
+      color: var(--color-white);
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-col h4::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background: var(--color-gold);
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--color-muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-gold-light);
+      padding-left: 6px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #78716c;
+      font-size: 0.82rem;
+    }
+
+    /* -----------------------------------------
+       購物車側欄抽屜 Cart Drawer
+    ----------------------------------------- */
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .cart-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: min(440px, 100%);
+      height: 100%;
+      background: #201d1b;
+      border-left: 1px solid var(--color-gold);
+      z-index: 2001;
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.7);
+    }
+
+    .cart-drawer.active {
+      transform: translateX(0);
+    }
+
+    .cart-header {
+      padding: 24px;
+      border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cart-header h3 {
+      font-family: var(--font-serif);
+      color: var(--color-white);
+      font-size: 1.3rem;
+    }
+
+    .close-cart {
+      color: var(--color-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .close-cart:hover {
+      color: var(--color-white);
+    }
+
+    .cart-items-wrap {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(41, 37, 36, 0.6);
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(245, 158, 11, 0.15);
+    }
+
+    .cart-item-info h4 {
+      color: var(--color-white);
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .cart-item-info span {
+      color: var(--color-gold-light);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .cart-footer {
+      padding: 24px;
+      border-top: 1px solid rgba(245, 158, 11, 0.2);
+      background: #181514;
+    }
+
+    .cart-total-row {
+      display: flex;
+      justify-content: space-between;
+      color: var(--color-white);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .cart-total-row span:last-child {
+      color: var(--color-gold);
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+    }
+
+    /* Toast 通知 */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, var(--color-dark-surface), var(--color-charcoal));
+      color: var(--color-white);
+      border: 1px solid var(--color-gold);
+      padding: 16px 24px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6), var(--shadow-gold);
+      z-index: 3000;
+      transform: translateY(120%);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .toast svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--color-gold);
+    }
+
+    /* -----------------------------------------
+       響應式設計 Responsive
+    ----------------------------------------- */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+      .ritual-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+      .store-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #1c1917;
+        flex-direction: column;
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 1px solid var(--color-gold);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+      }
+      .nav-links.active {
+        transform: translateY(0);
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .ritual-steps {
+        grid-template-columns: 1fr;
+      }
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+      .order-form-grid {
+        grid-template-columns: 1fr;
+      }
+      .order-box {
+        padding: 24px 18px;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===============================
+       頂部導覽列 Header & Navbar
+  =============================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-emblem" title="炳賢炸雞 - 手沖極品">
+          <svg viewBox="0 0 24 24">
+            <!-- 雞隻尊貴標誌 -->
+            <path d="M12 2C9.5 2 7.5 3.5 7 5.5C6.3 5.3 5.5 5.5 5 6C4.3 6.7 4.5 8 5.2 8.6C4.8 9.5 4.8 10.6 5.3 11.5L4 12C3 12.4 2.5 13.5 3 14.5L4.5 17.5C4.8 18.2 5.5 18.7 6.3 18.8L8 19V22H10V19H14V22H16V19L17.7 18.8C18.5 18.7 19.2 18.2 19.5 17.5L21 14.5C21.5 13.5 21 12.4 20 12L18.7 11.5C19.2 10.6 19.2 9.5 18.8 8.6C19.5 8 19.7 6.7 19 6C18.5 5.5 17.7 5.3 17 5.5C16.5 3.5 14.5 2 12 2ZM12 4C13.7 4 15 5.3 15 7V7.5C14.5 7.2 13.8 7 13 7H11C10.2 7 9.5 7.2 9 7.5V7C9 5.3 10.3 4 12 4ZM10 9H14C14.6 9 15 9.4 15 10C15 10.6 14.6 11 14 11H10C9.4 11 9 10.6 9 10C9 9.4 9.4 9 10 9Z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>炳賢炸雞店</h1>
+          <p>PING-HSIEN FRIED CHICKEN</p>
+        </div>
+      </a>
+
+      <!-- 電腦端主選單 -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">首頁</a></li>
+        <li><a href="#philosophy">叫花手沖緣起</a></li>
+        <li><a href="#ritual">手沖儀式</a></li>
+        <li><a href="#menu">招牌盛宴</a></li>
+        <li><a href="#reviews">炳賢粉口碑</a></li>
+        <li><a href="#order">立即點餐預訂</a></li>
+        <li><a href="#stores">鑑賞門市</a></li>
+      </ul>
+
+      <!-- 功能操作區 -->
+      <div class="nav-actions">
+        <button class="cart-trigger" id="cartOpenBtn" title="查看手沖點餐清單" aria-label="查看購物車">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 18C5.9 18 5 18.9 5 20S5.9 22 7 22 9 21.1 9 20 8.1 18 7 18ZM1 2V4H3L6.6 11.6L5.2 14C5.1 14.3 5 14.6 5 15C5 16.1 5.9 17 7 17H19V15H7.4C7.3 15 7.2 14.9 7.2 14.8L7.3 14.5L8.1 13H15.5C16.3 13 16.9 12.6 17.3 12L20.9 5.5C21 5.3 21 5.2 21 5C21 4.4 20.6 4 20 4H5.2L4.3 2H1ZM17 18C15.9 18 15 18.9 15 20S15.9 22 17 22 19 21.1 19 20 18.1 18 17 18Z"/>
+          </svg>
+          <span class="cart-count" id="cartCountBadge">0</span>
+        </button>
+
+        <a href="#order" class="btn btn-gold btn-sm">預訂手沖雞</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="切換選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===============================
+       Hero 旗艦主視覺 (以手沖之敬意，重塑叫花金甲)
+  =============================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="dot"></span>
+          手沖炸雞首創者・傳奇叫花手藝再現
+        </div>
+        <h2 class="hero-title">
+          以手沖之敬意<br>
+          重塑<span class="highlight">叫花金甲炸雞</span>
+        </h2>
+        <p class="hero-lead">
+          當<strong>高級叫花雞</strong>的荷葉泥封陳釀慢煨，遇上<strong>93°C 極限旋紋手沖淋油</strong>工藝。
+          每一道脆皮都如琥珀般透亮薄脆，每一口雞肉都迸射滾燙甘甜的高湯肉汁。
+          專為<strong>手沖炸雞愛好者</strong>與熱愛炳賢的你，獻上極致肉香狂想！
+        </p>
+
+        <div class="hero-features">
+          <div class="feature-chip">
+            <svg viewBox="0 0 24 24"><path d="M12 2L1 21H23L12 2ZM12 6L19.5 19H4.5L12 6Z"/></svg>
+            古法荷葉泥裹封汁
+          </div>
+          <div class="feature-chip">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM11 7H13V13H11V7ZM12 17C11.45 17 11 16.55 11 16S11.45 15 12 15 13 15.45 13 16 12.55 17 12 17Z"/></svg>
+            93°C 細嘴壺旋沖淋炸
+          </div>
+          <div class="feature-chip">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+            每日限量 50 隻現沖現做
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#order" class="btn btn-gold">
+            <span>搶先預訂手沖炸雞</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13H16.17L11.29 17.88L12.71 19.29L20 12L12.71 4.71L11.29 6.12L16.17 11H5V13Z"/></svg>
+          </a>
+          <a href="#ritual" class="btn btn-outline">
+            <span>鑑賞手沖儀式</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 右側叫花金甲展示卡 -->
+      <div class="hero-showcase">
+        <div class="chicken-art-card">
+          <div class="card-badge-floating">炳賢神級代表作</div>
+          <div class="showcase-illustration">
+            <!-- 尊貴金黃叫花雞與手沖油壺 SVG 繪圖 -->
+            <svg class="drip-canvas" viewBox="0 0 360 260">
+              <defs>
+                <linearGradient id="goldChickenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fde68a" />
+                  <stop offset="40%" stop-color="#f59e0b" />
+                  <stop offset="85%" stop-color="#b45309" />
+                  <stop offset="100%" stop-color="#78350f" />
+                </linearGradient>
+                <linearGradient id="kettleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#e2e8f0" />
+                  <stop offset="70%" stop-color="#94a3b8" />
+                  <stop offset="100%" stop-color="#475569" />
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- 底盤青瓷荷葉盤 -->
+              <ellipse cx="180" cy="210" rx="145" ry="32" fill="#2d3748" opacity="0.6"/>
+              <ellipse cx="180" cy="205" rx="135" ry="24" fill="#3f3d37" stroke="#b45309" stroke-width="2"/>
+              <!-- 荷葉邊緣襯底 -->
+              <path d="M 65 200 C 90 225, 270 225, 295 200 C 275 190, 85 190, 65 200 Z" fill="#2f4f2f" opacity="0.8"/>
+
+              <!-- 叫花炸全雞本體 -->
+              <path d="M 110 185 C 100 135, 140 100, 180 100 C 220 100, 260 135, 250 185 C 230 205, 130 205, 110 185 Z" fill="url(#goldChickenGrad)" filter="url(#glow)"/>
+              <!-- 脆皮雞腿弧度 -->
+              <ellipse cx="140" cy="170" rx="28" ry="20" fill="#f59e0b" transform="rotate(-15 140 170)"/>
+              <ellipse cx="220" cy="170" rx="28" ry="20" fill="#d97706" transform="rotate(15 220 170)"/>
+              <!-- 叫花雞骨梢封金 -->
+              <path d="M 120 180 L 95 195 C 90 198, 85 192, 88 187 L 115 170 Z" fill="#fef3c7"/>
+              <path d="M 240 180 L 265 195 C 270 198, 275 192, 272 187 L 245 170 Z" fill="#fef3c7"/>
+
+              <!-- 鵝頸手沖壺 (Pour-Over Kettle) 正在向叫花雞手沖滾燙黃金雞油 -->
+              <path d="M 65 50 L 105 50 L 115 95 L 55 95 Z" fill="url(#kettleGrad)"/>
+              <path d="M 105 75 Q 165 55, 175 105" fill="none" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 50 60 Q 30 72, 50 88" fill="none" stroke="#94a3b8" stroke-width="6"/>
+
+              <!-- 手沖金油涓涓細流與金光水滴 -->
+              <path d="M 175 106 Q 178 125, 180 148" fill="none" stroke="#fde047" stroke-width="4.5" stroke-dasharray="6,4">
+                <animate attributeName="stroke-dashoffset" from="20" to="0" dur="0.8s" repeatCount="indefinite" />
+              </path>
+
+              <!-- 炸油噴濺與香氣金星 -->
+              <circle cx="178" cy="148" r="4" fill="#fde047" filter="url(#glow)">
+                <animate attributeName="r" values="3;6;3" dur="1s" repeatCount="indefinite" />
+              </circle>
+              <circle cx="165" cy="138" r="2.5" fill="#f59e0b"/>
+              <circle cx="195" cy="142" r="3" fill="#fbbf24"/>
+              <circle cx="184" cy="125" r="2" fill="#ffffff"/>
+            </svg>
+          </div>
+
+          <div class="dish-info">
+            <h3>炳賢御品・手沖叫花炸全雞</h3>
+            <p>整隻放養跑山雞以荷葉秘醬裹煨，再以高溫鵝頸壺旋紋油淋，皮脆如玻璃，肉汁如湧泉。</p>
+            <div class="dish-meta">
+              <div class="dish-price">
+                <span class="currency">NT$</span>
+                <span class="amount">880</span>
+                <span class="original">NT$ 980</span>
+              </div>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('炳賢御品・手沖叫花炸全雞', 880)">
+                + 點選手沖全雞
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       品牌哲學 Philosophy & Story (高級叫花雞 ✕ 手沖魂)
+  =============================== -->
+  <section class="section-story" id="philosophy">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">THE ART OF BING-HSIEN</div>
+        <h2 class="section-title">
+          為什麼是<span class="glow">手沖炸雞</span>？
+        </h2>
+        <p class="section-subtitle">
+          傳統炸雞浸沒油槽，往往外皮油膩、肉汁流失；
+          炳賢師傅將「古代叫花雞的封味哲學」與「當代手沖咖啡的萃取控溫」跨界合一。
+        </p>
+      </div>
+
+      <div class="story-grid">
+        <div class="story-text-col">
+          <div class="story-quote-box">
+            <p>
+              「手沖咖啡追求每一秒的流速與香氣層次；
+              而炳賢的手沖炸雞，則是運用細嘴壺將 93°C 至 185°C 的滾燙金油，
+              精準淋灑在叫花薄皮上的每寸肌理。」
+            </p>
+          </div>
+          <div class="story-narrative">
+            <p>
+              相傳叫花雞乃將肥嫩土雞裹以<strong>江南荷葉與澄淨黃泥</strong>，煨入炭火中慢熟，香氣封於骨髓。
+              <strong>炳賢炸雞店</strong>創辦人炳賢先生深諳老饕之道：若能在破泥解荷的瞬間，
+              以職人級手沖壺進行三段式金油澆淋，即可使荷香化為極致脆甲！
+            </p>
+            <p>
+              這是一場專為<strong>手沖炸雞愛好者</strong>設計的感官儀式 —— 
+              你看得見油花的迴旋律動、聽得見金甲的清脆碎響、嗅得見十三香山椒與陳年醬香的爆發。
+            </p>
+          </div>
+        </div>
+
+        <div class="craft-pillars">
+          <div class="pillar-card">
+            <span class="pillar-num">01</span>
+            <h4>嚴選跑山閹雞</h4>
+            <p>精選 120 天南投高山林下跑山雞，肉質緊緻多汁，皮下脂肪清甜如酪。</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-num">02</span>
+            <h4>江南荷葉古煨</h4>
+            <p>西湖新鮮荷葉包覆、紹興老酒與甘草丁香封味，肉質軟嫩至極。</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-num">03</span>
+            <h4>93°C 精準油淋</h4>
+            <p>如手沖精品咖啡般的注水神技，螺旋油淋，逼出油脂，鎖定甘甜。</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-num">04</span>
+            <h4>炳賢十三香金椒</h4>
+            <p>炳賢私房研磨花椒、胡椒、甘草與山奈，灑上瞬間香氣拔尖昇華。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       手沖炸雞儀式 Ritual Steps
+  =============================== -->
+  <section class="section-ritual" id="ritual">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">FOUR STEP CEREMONY</div>
+        <h2 class="section-title">
+          炳賢叫花・<span class="glow">手沖四部曲</span>
+        </h2>
+        <p class="section-subtitle">
+          每一隻抵達您餐桌的炸雞，都歷經這套神聖的四階段料理儀軌。
+        </p>
+      </div>
+
+      <div class="ritual-steps">
+        <div class="ritual-card">
+          <div class="step-badge">I</div>
+          <h3>荷香泥封</h3>
+          <p>
+            天然荷葉緊密包裹全雞，外層覆以高嶺陶泥慢火煨烤，鎖住深層天然雞汁與藥膳香氣。
+          </p>
+        </div>
+
+        <div class="ritual-card">
+          <div class="step-badge">II</div>
+          <h3>破土開金</h3>
+          <p>
+            由主廚手執金槌當面敲開酥泥，荷葉蒸氣瀰漫而出，濃郁香氣瞬間撲鼻，儀式感拉滿。
+          </p>
+        </div>
+
+        <div class="ritual-card">
+          <div class="step-badge">III</div>
+          <h3>旋紋手沖</h3>
+          <p>
+            特製鵝頸油壺定溫 93°C 緩緩注油，由內圈至外圈畫圓淋炸，造就如琉璃般極脆表皮。
+          </p>
+        </div>
+
+        <div class="ritual-card">
+          <div class="step-badge">IV</div>
+          <h3>現研落香</h3>
+          <p>
+            灑上炳賢特製手沖山椒鹽，咔滋咬下，酥皮在齒頰間崩裂，滾燙肉汁狂湧迸射。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       招牌盛宴 Menu Section
+  =============================== -->
+  <section class="section-menu" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">GOURMET SELECTION</div>
+        <h2 class="section-title">
+          炳賢招牌・<span class="glow">名物盛宴</span>
+        </h2>
+        <p class="section-subtitle">
+          為各路手沖炸雞信徒與炳賢愛好者精心定製，款款皆為靈魂之作。
+        </p>
+      </div>
+
+      <!-- 分類篩選 -->
+      <div class="menu-filter">
+        <button class="filter-btn active" onclick="filterMenu('all')">全部名品</button>
+        <button class="filter-btn" onclick="filterMenu('whole')">手沖叫花全雞</button>
+        <button class="filter-btn" onclick="filterMenu('cuts')">部位嚴選淋炸</button>
+        <button class="filter-btn" onclick="filterMenu('sides')">手作佐酒小食</button>
+        <button class="filter-btn" onclick="filterMenu('drinks')">解膩冷萃茗茶</button>
+      </div>
+
+      <!-- 菜單格點 -->
+      <div class="menu-grid" id="menuGrid">
+
+        <!-- 菜色 1 -->
+        <div class="menu-card" data-category="whole">
+          <div class="menu-card-img-wrap">
+            <span class="menu-badge">鎮店之寶</span>
+            <div class="crisp-meter">脆度 ★★★★★</div>
+            <svg width="110" height="90" viewBox="0 0 100 80">
+              <ellipse cx="50" cy="55" rx="38" ry="18" fill="#523a28"/>
+              <path d="M 25 50 Q 50 15, 75 50 Z" fill="#d97706"/>
+              <ellipse cx="40" cy="45" rx="14" ry="10" fill="#f59e0b"/>
+              <ellipse cx="60" cy="45" rx="14" ry="10" fill="#f59e0b"/>
+              <circle cx="50" cy="30" r="5" fill="#fde68a"/>
+            </svg>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">炳賢御品手沖叫花全雞</h3>
+            <p class="menu-card-desc">附金槌破泥儀式、西湖荷葉裹香、鵝頸壺高溫現沖淋炸。肉汁最豐盈飽滿的至尊首選。</p>
+            <div class="menu-card-footer">
+              <div class="item-price"><small>NT$</small>880</div>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('炳賢御品手沖叫花全雞', 880)">加入點單</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 菜色 2 -->
+        <div class="menu-card" data-category="cuts">
+          <div class="menu-card-img-wrap">
+            <span class="menu-badge">老饕必吃</span>
+            <div class="crisp-meter">脆度 ★★★★☆</div>
+            <svg width="100" height="85" viewBox="0 0 100 80">
+              <path d="M 30 20 Q 75 15, 75 60 Q 30 75, 25 35 Z" fill="#b45309"/>
+              <ellipse cx="50" cy="45" rx="20" ry="14" fill="#f59e0b"/>
+              <rect x="18" y="42" width="16" height="8" rx="4" fill="#fef3c7"/>
+            </svg>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">手沖金澄帶骨大雞腿</h3>
+            <p class="menu-card-desc">精選黃金大雞腿，以三段溫控手沖油淋，骨邊肉滑嫩鮮香，皮脆如仙貝。</p>
+            <div class="menu-card-footer">
+              <div class="item-price"><small>NT$</small>220</div>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('手沖金澄帶骨大雞腿', 220)">加入點單</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 菜色 3 -->
+        <div class="menu-card" data-category="cuts">
+          <div class="menu-card-img-wrap">
+            <span class="menu-badge">手沖狂熱</span>
+            <div class="crisp-meter">脆度 ★★★★★</div>
+            <svg width="100" height="85" viewBox="0 0 100 80">
+              <path d="M 20 40 Q 50 15, 80 30 Q 70 65, 30 55 Z" fill="#92400e"/>
+              <path d="M 35 32 Q 55 22, 68 32 Q 60 52, 38 48 Z" fill="#f59e0b"/>
+            </svg>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">荷香極脆叫花二節翅盛合</h3>
+            <p class="menu-card-desc">以荷葉蒸氣引出膠質，再進行雙重手沖酥化處理，佐炳賢特調九層塔金桔辣醬（一份六支）。</p>
+            <div class="menu-card-footer">
+              <div class="item-price"><small>NT$</small>320</div>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('荷香極脆叫花二節翅盛合', 320)">加入點單</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 菜色 4 -->
+        <div class="menu-card" data-category="sides">
+          <div class="menu-card-img-wrap">
+            <span class="menu-badge">下酒首推</span>
+            <div class="crisp-meter">脆度 ★★★★★</div>
+            <svg width="100" height="85" viewBox="0 0 100 80">
+              <circle cx="35" cy="35" r="12" fill="#d97706"/>
+              <circle cx="62" cy="38" r="14" fill="#f59e0b"/>
+              <circle cx="48" cy="55" r="13" fill="#b45309"/>
+              <circle cx="46" cy="42" r="4" fill="#fde68a"/>
+            </svg>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">手沖油封一口金雞米花</h3>
+            <p class="menu-card-desc">嚴選腿肉滾上金黃米糠脆粉，熱油現沖激盪出爆漿口感，附贈炳賢搖搖椒鹽包。</p>
+            <div class="menu-card-footer">
+              <div class="item-price"><small>NT$</small>160</div>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('手沖油封一口金雞米花', 160)">加入點單</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 菜色 5 -->
+        <div class="menu-card" data-category="sides">
+          <div class="menu-card-img-wrap">
+            <span class="menu-badge">叫花秘制</span>
+            <div class="crisp-meter">香氣 ★★★★★</div>
+            <svg width="100" height="85" viewBox="0 0 100 80">
+              <rect x="25" y="45" width="50" height="20" rx="6" fill="#78350f"/>
+              <ellipse cx="50" cy="45" rx="25" ry="12" fill="#d97706"/>
+              <path d="M 35 38 Q 50 25, 65 38" stroke="#fde68a" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">荷葉叫花土雞油糯米蒸飯</h3>
+            <p class="menu-card-desc">滴取手沖炸雞時溢出的純淨澄黃雞油，拌入圓糯米、香菇、栗子蒸透，香氣馥郁難忘。</p>
+            <div class="menu-card-footer">
+              <div class="item-price"><small>NT$</small>120</div>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('荷葉叫花土雞油糯米蒸飯', 120)">加入點單</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 菜色 6 -->
+        <div class="menu-card" data-category="drinks">
+          <div class="menu-card-img-wrap">
+            <span class="menu-badge">解膩神飲</span>
+            <div class="crisp-meter">回甘 ★★★★★</div>
+            <svg width="80" height="85" viewBox="0 0 80 80">
+              <rect x="25" y="15" width="30" height="52" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+              <rect x="28" y="32" width="24" height="32" fill="#b45309" opacity="0.8"/>
+              <line x1="40" y1="10" x2="40" y2="40" stroke="#fde68a" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">炳賢極境冷萃大紅袍烏龍</h3>
+            <p class="menu-card-desc">以 4°C 低溫慢速冷泡 18 小時的武夷岩茶，茶韻沉厚帶有炭火焙香，搭配手沖炸雞天作之合。</p>
+            <div class="menu-card-footer">
+              <div class="item-price"><small>NT$</small>90</div>
+              <button class="btn btn-gold btn-sm" onclick="addToCart('炳賢極境冷萃大紅袍烏龍', 90)">加入點單</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       炳賢粉好評見證 Social Proof
+  =============================== -->
+  <section class="section-reviews" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">VOICE OF CRITICS & FANS</div>
+        <h2 class="section-title">
+          炳賢愛好者・<span class="glow">食客狂熱好評</span>
+        </h2>
+        <p class="section-subtitle">
+          全台手沖愛好者與老饕齊聲讚嘆，每週朝聖必點！
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            「原本以為手沖炸雞只是噱頭，吃下第一口叫花全雞我立刻跟炳賢道歉！那個薄皮脆度真的像玻璃一樣崩裂，裡面的肉汁甚至噴在我的襯衫上！太銷魂了！」
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">陳</div>
+            <div class="reviewer-info">
+              <h4>陳銘祥 老師</h4>
+              <span>資深美食家 / 手沖咖啡評審</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            「高級叫花雞的包裝和現場開土儀式感直接拿滿分！用鵝頸壺手沖淋油的視覺效果超級炸裂，拍照打卡朋友全部瘋狂追問在哪裡買，炳賢真的是炸雞界的天花板！」
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">林</div>
+            <div class="reviewer-info">
+              <h4>林雅琪</h4>
+              <span>Instagram 頂級美食生活家</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            「我是炳賢的忠實鐵粉！輸入 VIP 優惠碼還有折扣。手沖二節翅配那瓶冷萃大紅袍，下班後的疲勞瞬間一掃而空，皮完全不膩口，一吃就停不下來！」
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">張</div>
+            <div class="reviewer-info">
+              <h4>張瀚元</h4>
+              <span>炳賢炸雞 創始 VIP 會員</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       吸引炳賢愛好者消費：線上預約與點餐
+  =============================== -->
+  <section class="section-order" id="order">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">ONLINE RESERVATION</div>
+        <h2 class="section-title">
+          尊享席位・<span class="glow">立即預約手沖炸雞</span>
+        </h2>
+        <p class="section-subtitle">
+          每日堅持手工泥裹現沖，限量 50 席。為維護極致口感，強烈建議提早線上預訂。
+        </p>
+      </div>
+
+      <div class="order-box">
+        <form id="orderForm" onsubmit="handleOrderSubmit(event)">
+          <div class="order-form-grid">
+            <div class="form-group">
+              <label class="form-label" for="custName">貴賓大名 *</label>
+              <input type="text" id="custName" class="form-control" placeholder="請輸入姓名（例如：王小明）" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="custPhone">聯絡電話 *</label>
+              <input type="tel" id="custPhone" class="form-control" placeholder="請輸入手機號碼（09xxxxxxxx）" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="orderMainItem">主餐預訂項目 *</label>
+              <select id="orderMainItem" class="form-control" onchange="updateSummary()" required>
+                <option value="880" data-name="炳賢御品手沖叫花全雞">炳賢御品手沖叫花全雞 (NT$ 880)</option>
+                <option value="220" data-name="手沖金澄帶骨大雞腿">手沖金澄帶骨大雞腿 (NT$ 220)</option>
+                <option value="320" data-name="荷香極脆叫花二節翅盛合">荷香極脆叫花二節翅盛合 (NT$ 320)</option>
+                <option value="160" data-name="手沖油封一口金雞米花">手沖油封一口金雞米花 (NT$ 160)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="orderQuantity">份數 *</label>
+              <select id="orderQuantity" class="form-control" onchange="updateSummary()">
+                <option value="1">1 份</option>
+                <option value="2">2 份</option>
+                <option value="3">3 份</option>
+                <option value="5">5 份（聚會推薦）</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="orderSpice">手沖特製椒鹽風味</label>
+              <select id="orderSpice" class="form-control">
+                <option value="classic">炳賢經典十三香（微麻回甘・推薦）</option>
+                <option value="heavy">老饕激辣鬼椒手沖鹽（熱血首選）</option>
+                <option value="garlic">古法荷葉蒜香金椒</option>
+                <option value="pure">原味品鑑（純享脆皮原香）</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="orderDate">預計取餐 / 入席時間 *</label>
+              <input type="datetime-local" id="orderDate" class="form-control" required>
+            </div>
+
+            <!-- 炳賢粉專屬優惠碼專區 -->
+            <div class="form-group full-width">
+              <label class="form-label" for="promoCode">
+                炳賢粉絲專屬通關密碼（輸入「<strong>BINGXIAN</strong>」或「<strong>炳賢愛好者</strong>」享 88 折優惠）
+              </label>
+              <div class="fan-code-wrap">
+                <input type="text" id="promoCode" class="form-control" placeholder="請輸入優惠代碼">
+                <button type="button" class="btn btn-gold btn-sm" onclick="applyPromo()">套用折扣</button>
+              </div>
+              <small id="promoMsg" style="color: var(--color-gold); font-size: 0.85rem; margin-top: 4px; display: none;"></small>
+            </div>
+          </div>
+
+          <!-- 即時計算金額小計 -->
+          <div class="order-summary-box">
+            <div class="summary-row">
+              <span id="summaryItemName">炳賢御品手沖叫花全雞 x 1</span>
+              <span id="summaryItemPrice">NT$ 880</span>
+            </div>
+            <div class="summary-row" id="discountRow" style="display: none; color: #4ade80;">
+              <span>炳賢愛好者專屬尊榮 88 折優惠</span>
+              <span id="discountAmount">- NT$ 106</span>
+            </div>
+            <div class="summary-row total">
+              <span>預估應付金額</span>
+              <span class="price-val" id="summaryTotal">NT$ 880</span>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-gold" style="width: 100%; max-width: 380px;">
+              確認提交預約單
+            </button>
+            <p style="margin-top: 12px; color: var(--color-muted); font-size: 0.8rem;">
+              提交後店內客服將於 15 分鐘內致電確認手沖火候與到店時辰
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       門市鑑賞資訊 Store Info
+  =============================== -->
+  <section class="section-stores" id="stores">
+    <div class="container">
+      <div class="store-grid">
+        <div class="store-info-card">
+          <h3>
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/></svg>
+            炳賢炸雞・旗艦手沖鑑賞會所
+          </h3>
+          <ul class="info-list">
+            <li><strong>總店地址：</strong>台北市信義區金油大道 88 號（近捷運站步行 3 分鐘）</li>
+            <li><strong>服務專線：</strong>(02) 2345-6789 / 0988-777-666</li>
+            <li><strong>營業時段：</strong>週二至週日 11:30 - 22:30（每週一公休煨料）</li>
+            <li><strong>手沖服務：</strong>午間 12:00 / 13:30；晚間 17:30 / 19:00 / 20:30</li>
+            <li><strong>用餐須知：</strong>叫花全雞須提前兩小時泥封慢焙，現場備席每日限量</li>
+          </ul>
+        </div>
+
+        <div class="store-info-card">
+          <h3>
+            <svg viewBox="0 0 24 24"><path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM11 6H13V10H17V12H13V16H11V12H7V10H11V6Z"/></svg>
+            炳賢愛好者 VIP 專享禮遇
+          </h3>
+          <ul class="info-list">
+            <li><strong>專屬儀式：</strong>由主廚炳賢或掌門弟子親自於桌邊為您手沖油淋</li>
+            <li><strong>私房茶禮：</strong>凡訂購手沖叫花全雞，即贈冷萃大紅袍烏龍乙瓶</li>
+            <li><strong>生日特權：</strong>當月壽星享專屬金色荷葉封泥題字祝福儀式</li>
+            <li><strong>外帶真空：</strong>全台低溫冷鏈宅配，配備專利回烤手沖淋油包</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       頁尾 Footer
+  =============================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="brand-logo">
+            <div class="brand-emblem">
+              <svg viewBox="0 0 24 24"><path d="M12 2C9.5 2 7.5 3.5 7 5.5C6.3 5.3 5.5 5.5 5 6C4.3 6.7 4.5 8 5.2 8.6C4.8 9.5 4.8 10.6 5.3 11.5L4 12C3 12.4 2.5 13.5 3 14.5L4.5 17.5C4.8 18.2 5.5 18.7 6.3 18.8L8 19V22H10V19H14V22H16V19L17.7 18.8C18.5 18.7 19.2 18.2 19.5 17.5L21 14.5C21.5 13.5 21 12.4 20 12L18.7 11.5C19.2 10.6 19.2 9.5 18.8 8.6C19.5 8 19.7 6.7 19 6C18.5 5.5 17.7 5.3 17 5.5C16.5 3.5 14.5 2 12 2Z"/></svg>
+            </div>
+            <div class="brand-text">
+              <h1>炳賢炸雞店</h1>
+              <p>PING-HSIEN FRIED CHICKEN</p>
+            </div>
+          </div>
+          <p class="footer-desc">
+            秉持高級叫花雞之神韻，融會當代手沖油淋之極限工藝。
+            讓每一隻炸雞，都成為手沖炸雞愛好者舌尖上的黃金詩篇。
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>品牌鑑賞</h4>
+          <ul class="footer-links">
+            <li><a href="#philosophy">叫花手沖淵源</a></li>
+            <li><a href="#ritual">四步手沖儀程</a></li>
+            <li><a href="#menu">招牌全雞品鑑</a></li>
+            <li><a href="#reviews">老饕口碑報導</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>尊榮服務</h4>
+          <ul class="footer-links">
+            <li><a href="#order">線上席位預約</a></li>
+            <li><a href="#order">炳賢粉專屬折扣</a></li>
+            <li><a href="#stores">旗艦會所導引</a></li>
+            <li><a href="#order">企業聚會包場</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 炳賢炸雞店 Ping-Hsien Fried Chicken. All Rights Reserved. 規格依據 specs/outline.md 製作。</p>
+        <p>為手沖炸雞愛好者匠心呈獻・推廣好吃的炸雞</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===============================
+       購物車側欄抽屜 Cart Drawer
+  =============================== -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>手沖點餐清單</h3>
+      <button class="close-cart" onclick="closeCart()" aria-label="關閉清單">&times;</button>
+    </div>
+    <div class="cart-items-wrap" id="cartItemsContainer">
+      <!-- 購物清單項目由 JS 動態生成 -->
+      <div style="text-align: center; color: var(--color-muted); padding-top: 40px;">
+        目前尚未加入任何手沖炸雞名品
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>合計金額</span>
+        <span id="cartDrawerTotal">NT$ 0</span>
+      </div>
+      <a href="#order" class="btn btn-gold" style="width: 100%;" onclick="closeCart()">
+        前往填寫預訂資料
+      </a>
+    </div>
+  </aside>
+
+  <!-- 浮動 Toast 提示 -->
+  <div class="toast" id="toast">
+    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>
+    <span id="toastMsg">成功加入點餐清單！</span>
+  </div>
+
+  <!-- ===============================
+       互動邏輯 JavaScript
+  =============================== -->
+  <script>
+    // 購物車數據與折價狀態
+    let cart = [];
+    let isDiscountApplied = false;
+
+    // 手機端導覽切換
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // 點擊導覽連結後自動關閉手機選單
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // 捲動監聽器（Navbar 陰影效果）
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 40) {
+        navbar.style.background = 'rgba(28, 25, 23, 0.96)';
+        navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
+      } else {
+        navbar.style.background = 'rgba(28, 25, 23, 0.85)';
+        navbar.style.boxShadow = 'none';
+      }
+    });
+
+    // 菜單類別篩選
+    function filterMenu(category) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.menu-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 加入購物清單
+    function addToCart(title, price) {
+      cart.push({ title, price, id: Date.now() });
+      updateCartUI();
+      showToast(`已將「${title}」加入點單！`);
+    }
+
+    // 移除品項
+    function removeFromCart(id) {
+      cart = cart.filter(item => item.id !== id);
+      updateCartUI();
+    }
+
+    // 更新購物車清單與計數
+    function updateCartUI() {
+      const badge = document.getElementById('cartCountBadge');
+      badge.textContent = cart.length;
+
+      const container = document.getElementById('cartItemsContainer');
+      const drawerTotal = document.getElementById('cartDrawerTotal');
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div style="text-align: center; color: var(--color-muted); padding-top: 40px;">
+            目前尚未加入任何手沖炸雞名品
+          </div>`;
+        drawerTotal.textContent = 'NT$ 0';
+        return;
+      }
+
+      let total = 0;
+      container.innerHTML = cart.map(item => {
+        total += item.price;
+        return `
+          <div class="cart-item">
+            <div class="cart-item-info">
+              <h4>${item.title}</h4>
+              <span>NT$ ${item.price}</span>
+            </div>
+            <button onclick="removeFromCart(${item.id})" style="color: #ef4444; font-size: 1.2rem; cursor: pointer;">&times;</button>
+          </div>
+        `;
+      }).join('');
+
+      drawerTotal.textContent = `NT$ ${total}`;
+    }
+
+    // 打開與關閉購物車抽屜
+    const cartOverlay = document.getElementById('cartOverlay');
+    const cartDrawer = document.getElementById('cartDrawer');
+    document.getElementById('cartOpenBtn').addEventListener('click', () => {
+      cartOverlay.classList.add('active');
+      cartDrawer.classList.add('active');
+    });
+
+    function closeCart() {
+      cartOverlay.classList.remove('active');
+      cartDrawer.classList.remove('active');
+    }
+
+    // Toast 顯示
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastMsg').textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // 訂餐總金額與明細即時計算
+    function updateSummary() {
+      const mainSelect = document.getElementById('orderMainItem');
+      const qtySelect = document.getElementById('orderQuantity');
+      
+      const pricePerUnit = parseInt(mainSelect.value, 10);
+      const selectedName = mainSelect.options[mainSelect.selectedIndex].getAttribute('data-name');
+      const qty = parseInt(qtySelect.value, 10);
+
+      const subtotal = pricePerUnit * qty;
+      document.getElementById('summaryItemName').textContent = `${selectedName} x ${qty}`;
+      document.getElementById('summaryItemPrice').textContent = `NT$ ${subtotal}`;
+
+      const discountRow = document.getElementById('discountRow');
+      const discountAmount = document.getElementById('discountAmount');
+      const summaryTotal = document.getElementById('summaryTotal');
+
+      if (isDiscountApplied) {
+        const discountVal = Math.round(subtotal * 0.12);
+        const finalTotal = subtotal - discountVal;
+        discountRow.style.display = 'flex';
+        discountAmount.textContent = `- NT$ ${discountVal}`;
+        summaryTotal.textContent = `NT$ ${finalTotal}`;
+      } else {
+        discountRow.style.display = 'none';
+        summaryTotal.textContent = `NT$ ${subtotal}`;
+      }
+    }
+
+    // 炳賢粉專屬通關密碼兌換
+    function applyPromo() {
+      const input = document.getElementById('promoCode').value.trim().toUpperCase();
+      const msg = document.getElementById('promoMsg');
+      
+      if (input === 'BINGXIAN' || input === '炳賢愛好者' || input === '炳賢我愛你') {
+        isDiscountApplied = true;
+        msg.textContent = '🎉 驗證成功！尊榮炳賢愛好者 88 折優惠已套用！';
+        msg.style.color = '#4ade80';
+        msg.style.display = 'block';
+        updateSummary();
+        showToast('尊榮炳賢愛好者 88 折已生效！');
+      } else if (input === '') {
+        msg.textContent = '請輸入通關密碼。';
+        msg.style.color = '#f87171';
+        msg.style.display = 'block';
+      } else {
+        msg.textContent = '密碼有誤，請輸入「BINGXIAN」或「炳賢愛好者」獲取特權！';
+        msg.style.color = '#f87171';
+        msg.style.display = 'block';
+      }
+    }
+
+    // 提交預約處理
+    function handleOrderSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('custName').value;
+      const phone = document.getElementById('custPhone').value;
+      const total = document.getElementById('summaryTotal').textContent;
+
+      alert(`🍗 感謝尊貴的炳賢愛好者【${name}】！\n您的手沖炸雞預約單已送出。\n總金額為 ${total}，主廚將立即安排古法荷葉泥裹與定溫手沖準備！`);
+      showToast('預約單提交成功！我們將盡速致電確認！');
+      document.getElementById('orderForm').reset();
+      isDiscountApplied = false;
+      document.getElementById('promoMsg').style.display = 'none';
+      updateSummary();
+    }
+
+    // 初始化預設取餐時間為當日下一小時
+    window.addEventListener('DOMContentLoaded', () => {
+      const now = new Date();
+      now.setHours(now.getHours() + 2);
+      now.setMinutes(0);
+      const iso = now.toISOString().slice(0, 16);
+      document.getElementById('orderDate').value = iso;
+      updateSummary();
+    });
+  </script>
+</body>
+</html>
